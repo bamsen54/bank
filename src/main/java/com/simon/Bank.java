@@ -18,4 +18,8 @@ public class Bank {
         this.balance -= amount;
         IO.println("New balance is: " + this.balance);
     }
+
+    public double getBalance() {
+        return balance;
+    }
 }
