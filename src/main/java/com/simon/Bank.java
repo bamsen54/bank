@@ -12,4 +12,10 @@ public class Bank {
         this.balance += amount;
         IO.println("New balance is: " + this.balance);
     }
+
+    public void withdraw(double amount) {
+        IO.print("Withdraw: " + amount + " ");
+        this.balance -= amount;
+        IO.println("New balance is: " + this.balance);
+    }
 }
