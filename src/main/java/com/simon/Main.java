@@ -13,7 +13,7 @@ public class Main {
         scanner = new Scanner(System.in);
 
         while(true) {
-            IO.print("1. Check balance  2. Deposit  3. Withdraw  4. Exit: ");
+            IO.print("1. Check balance  2. Deposit  3. Withdraw 4. Print Statement History 5. Exit: ");
 
             int input = scanner.nextInt();
 
@@ -21,7 +21,8 @@ public class Main {
                 case 1 -> CheckBalance(bank);
                 case 2 -> Deposit(bank);
                 case 3 -> Withdraw(bank);
-                case 4 -> {return;}
+                case 4 -> StateMentHistory(bank);
+                case 5 -> {return;}
             }
         }
     }
@@ -40,5 +41,9 @@ public class Main {
         IO.print("\nEnter amount to withdraw: ");
         double amount = scanner.nextDouble();
         bank.withdraw(amount);
+    }
+
+    public static void StateMentHistory(Bank bank) {
+        bank.printStatementHistory();
     }
 }
